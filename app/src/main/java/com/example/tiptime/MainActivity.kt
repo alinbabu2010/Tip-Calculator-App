@@ -5,7 +5,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tiptime.databinding.ActivityMainBinding
+import kotlin.math.ceil
 
+/**
+ * This class is used for creating main activity of the app.
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -36,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             var tip = tipPercentage * cost
             val roundUp = binding.roundUpSwitch.isChecked
             if (roundUp) {
-                tip = kotlin.math.ceil(tip)
+                tip = ceil(tip)
             }
             val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
             binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
