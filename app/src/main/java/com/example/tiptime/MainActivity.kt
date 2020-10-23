@@ -1,16 +1,13 @@
 package com.example.tiptime
 
-import android.content.Context
 import android.icu.text.NumberFormat
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.example.tiptime.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +28,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Please enter the input.", Toast.LENGTH_LONG).show()
         } else {
             val cost = stringInTextField.toDouble()
-            val selectedId = binding.tipOption.checkedRadioButtonId
-            val tipPercentage = when (selectedId) {
+            val tipPercentage = when (binding.tipOption.checkedRadioButtonId) {
                 R.id.option_twenty_percent -> 0.20
                 R.id.option_eighteen_percent -> 0.18
                 else -> 0.15
