@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/plain_text_input"
+        android:id="@+id/costOfService"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -18,13 +18,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cost_of_service"
+        android:id="@+id/serviceText"
         android:layout_width="160dp"
         android:layout_height="20dp"
         android:layout_marginTop="10dp"
         android:text="@string/service_question"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plain_text_input" />
+        app:layout_constraintTop_toBottomOf="@+id/costOfService" />
 
     <RadioGroup
         android:id="@+id/tip_option"
@@ -34,7 +34,7 @@
         android:checkedButton="@id/option_twenty_percent"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/cost_of_service">
+        app:layout_constraintTop_toTopOf="@id/serviceText">
 
         <RadioButton
             android:id="@+id/option_twenty_percent"
@@ -78,7 +78,7 @@
         android:id="@+id/tip_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tip_amount"
+        tools:text="Tip Amount: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button" />
 
