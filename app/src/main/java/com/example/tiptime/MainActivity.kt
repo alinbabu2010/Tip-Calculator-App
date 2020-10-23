@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
      *  This method is used to calculate the tip
      */
     private fun calculateTip() {
-        val stringInTextField = binding.costOfService.text.toString()
-        if (stringInTextField == "") {
+        val stringInTextField = binding.costOfServiceEditText.text.toString()
+        if (stringInTextField.isBlank()) {
             Toast.makeText(this, "Please enter the input.", Toast.LENGTH_LONG).show()
         } else {
             val cost = stringInTextField.toDouble()
