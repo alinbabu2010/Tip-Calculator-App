@@ -2,6 +2,8 @@ package com.example.tiptime
 
 import android.icu.text.NumberFormat
 import android.os.Bundle
+import android.text.Html
+import android.text.Html.fromHtml
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tiptime.databinding.ActivityMainBinding
@@ -15,6 +17,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Change the font color of action bar
+        supportActionBar?.setTitle(fromHtml("<font color=\"#FFEB3B\">" + getString(R.string.app_name) + "</font>"))
+
+        // Creating activity binding of views for easy access
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
