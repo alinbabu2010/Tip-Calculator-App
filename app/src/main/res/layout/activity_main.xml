@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFF6"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -22,7 +23,9 @@
         android:layout_width="160dp"
         android:layout_height="20dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/service_question"
+        android:textColor="#3E2723"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/costOfService" />
 
@@ -40,18 +43,21 @@
             android:id="@+id/option_twenty_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/amazing_20" />
+            android:text="@string/amazing_20"
+            android:textColor="#3E2723" />
 
         <RadioButton
             android:id="@+id/option_eighteen_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/good_18" />
+            android:text="@string/good_18"
+            android:textColor="#3E2723" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ok_15" />
+            android:text="@string/ok_15"
+            android:textColor="#3E2723" />
 
     </RadioGroup>
 
@@ -75,9 +81,14 @@
 
     <TextView
         android:id="@+id/tipResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="textStart"
+        android:textColor="#3E2723"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button"
         tools:text="Tip Amount: " />
 
